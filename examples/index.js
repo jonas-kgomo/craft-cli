@@ -1,0 +1,1 @@
+console.log('craft cli is great');

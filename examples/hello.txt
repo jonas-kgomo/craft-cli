@@ -1,0 +1,6 @@
+hello world from craft...
+This is a verbose message.
+It has multiple lines.
+Each line says something interesting.
+Like this one.
+And this one too.
