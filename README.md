@@ -16,13 +16,27 @@
 - **Ultra-Lite**: Zero flickering, fast terminal I/O.
 - **Vibrant ASCII**: Lipgloss-styled output with Japanese-inspired aesthetic.
 - **Code Labels**: Decorated blocks with language indicators (CSS, GO, etc.).
+- **Context Graph**: Automatically indexes your project for smart context retrieval.
+- **Arrakis (The Voice)**: Deep thinking suite for complex architectural tasks and reasoning amplification.
+- **Groq Powered**: Lightning-fast inference via Groq Cloud.
 - **Token Budget**: Real-time tracking [current/max | prompt↑ completion↓].
 - **Multi-Model**: Auto-fallback on rate limits (Llama 3.3 70B -> Mixtral).
 - **Brutal Safety**: Dangerous commands blocked; aggressive truncation.
 
+## Local 
+
+```bash
+/opt/homebrew/bin/go build -o craft main.go
+make build
+go build -o craft main.go
+```
+
 ## 📦 Global Installation
 
 To install CRAFT CLI globally so you can use it from any directory:
+
+
+
 
 ```bash
 # 1. Build and copy to /usr/local/bin
@@ -49,6 +63,20 @@ Now you can just type `craft` anywhere!
 - `├─ call:` : Function Call
 - `├─ res:` : Tool Result
 - `└─` : Response Complete
+
+## 🏜️ Arrakis (Deep Thinking)
+Trigger deep thinking mode by starting your prompt with `@ARRAKIS` (or type `@` then `Tab`):
+- **Amplification**: Enhances reasoning for smaller tasks (`@ARRAKIS --amp ...`).
+- **Decomposition**: Breaks large tasks into macro and micro tasks (`@ARRAKIS --dec ...`).
+- **Default**: Arrakis automatically estimates complexity to choose the best mode.
+- **Traceability**: All thoughts are logged to `scratchpad.md` (The Litany).
+
+## ⌨️ Shortcuts
+- `Enter`: Send message
+- `Alt+Enter`: New line
+- `Ctrl+C / Esc`: Quit
+- `@ + Tab`: Auto-complete @ARRAKIS
+- `/models`: Switch between available LLMs
 
 ## 🧠 Model Fallback
 
