@@ -2,6 +2,16 @@ internal
 
 .env 
 
-main.go 
+# main.go 
 
-craft.go
+# craft.go
+
+examples 
+
+.craft-index.json
+
+demo.sh
+test.sh 
+
+
+MAKEFILE

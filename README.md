@@ -1,110 +1,68 @@
-# 🛠️ CRAFT CLI (Ultra-Lite)
+# [-] CRAFT CLI (Ultra-Lite)
 
-**Context-Aware Reasoning & Function Toolkit** - Brutally optimized AI coding assistant.
+**Context-Aware Reasoning & Function Toolkit** - Brutally optimized AI coding engine.
 
  
 
-<div align="center">
+<p align="center"> Version 1.2<img src="./doc/snap.png" alt="snap" width="850"></p>
 
-<span> Dune | Moonlight Theme</span> 
-
-<img src="craft.png" width="800"/>
-</div>
-
-##  Features
+## [-] Features
 
 - **Ultra-Lite**: Zero flickering, fast terminal I/O.
-- **Vibrant ASCII**: Lipgloss-styled output with Japanese-inspired aesthetic.
+- **Pure ASCII**: Lipgloss-styled output with Japanese-inspired aesthetic.
 - **Code Labels**: Decorated blocks with language indicators (CSS, GO, etc.).
 - **Context Graph**: Automatically indexes your project for smart context retrieval.
-- **Arrakis (The Voice)**: Deep thinking suite for complex architectural tasks and reasoning amplification.
+- **Diff Viewer**: Side-by-side comparison tool with snapshot tracking for before/after diffs.
+- **Arrakis (The Voice)**: Deep logic suite for complex architectural tasks and reasoning amplification.
 - **Groq Powered**: Lightning-fast inference via Groq Cloud.
 - **Token Budget**: Real-time tracking [current/max | prompt↑ completion↓].
 - **Multi-Model**: Auto-fallback on rate limits (Llama 3.3 70B -> Mixtral).
 - **Brutal Safety**: Dangerous commands blocked; aggressive truncation.
 
-## Local 
-
-```bash
-/opt/homebrew/bin/go build -o craft main.go
-make build
-go build -o craft main.go
-```
-
-## 📦 Global Installation
-
-To install CRAFT CLI globally so you can use it from any directory:
-
-
-
+## [-] Installation
 
 ```bash
 # 1. Build and copy to /usr/local/bin
 make install
 
-# 2. Add your API key to your shell config (~/.zshrc or ~/.bash_profile)
+# 2. Add your API key to your shell config (~/.zshrc)
 export GROQ_API_KEY=gsk_...
 ```
 
 Now you can just type `craft` anywhere!
 
-## 🚀 Quick Start (Local)
+## [-] Interface Logic
 
-```bash
-./run.sh
-```
+- `>` : User Input
+- `loc: ` : Current working directory
+- `[act]` : Tool Action
+- `[-] res:` : Tool Result
+- `[-]` : Response Complete
 
-## 🎨 Interface Logic
+## [!] Arrakis (Deep Logic)
+Trigger deep logic mode by starting your prompt with `/ARRAKIS` (or press `Tab` to toggle persistent mode):
+- **Amplification**: Enhances reasoning for smaller tasks.
+- **Decomposition**: Breaks large tasks into macro and micro tasks.
+- **Traceability**: All thoughts are logged for transparency.
 
-- `▶` : User Input
-- `┌` : Request Start
-- `│` : Assistant Content
-- `[T]` : Tool Action
-- `├─ call:` : Function Call
-- `├─ res:` : Tool Result
-- `└─` : Response Complete
-
-## 🏜️ Arrakis (Deep Thinking)
-Trigger deep thinking mode by starting your prompt with `@ARRAKIS` (or type `@` then `Tab`):
-- **Amplification**: Enhances reasoning for smaller tasks (`@ARRAKIS --amp ...`).
-- **Decomposition**: Breaks large tasks into macro and micro tasks (`@ARRAKIS --dec ...`).
-- **Default**: Arrakis automatically estimates complexity to choose the best mode.
-- **Traceability**: All thoughts are logged to `scratchpad.md` (The Litany).
-
-## ⌨️ Shortcuts
+## [-] Shortcuts
 - `Enter`: Send message
-- `Alt+Enter`: New line
+- `Alt+Enter`: New line (TUI)
+- `Tab`: Toggle Arrakis Persistent Mode
 - `Ctrl+C / Esc`: Quit
-- `@ + Tab`: Auto-complete @ARRAKIS
 - `/models`: Switch between available LLMs
+- `/vis`: Visualize context graph and Arrakis flow
+- `/diff [file1] [file2]`: Open side-by-side diff viewer
+- `/snapshot <file>`: Capture file state for comparison
+- `/compare <file>`: Compare file against last snapshot
+- See **[doc/DOCS.md](doc/DOCS.md)** for complete documentation.
+- See **[FEATURES.md](FEATURES.md)** for a full list of capabilities.
+- See **[BACKLOG.md](BACKLOG.md)** for planned enhancements.
 
-## 🧠 Model Fallback
-
-1. `llama-3.3-70b-versatile` (Primary)
-2. `llama-3.1-70b-versatile` (Fallback 1)
-3. `mixtral-8x7b-32768` (Fallback 2)
-
-## 🛡️ Safety & Truncation
+## [-] Safety & Truncation
 
 - **Files**: Read truncated at 4KB.
 - **Bash**: Output truncated at 500 chars.
 - **Security**: Blocking `rm -rf /`, `mkfs`, `sudo`, and more.
 
-## 🔧 Tools
-
-- `read_file`: Safe read with markers.
-- `write_file`: Atomic write with directory creation.
-- `list_dir`: ASCII file tree with `[D]` and `[F]` icons.
-- `bash`: Full shell access (guarded).
-
-## 📊 Token Budget
-
-- **Max**: 6000 tokens.
-- **Target**: 4000 tokens (auto-eviction).
-- **History**: Sliding window of 4 turns.
-
-Clean, fast, beautiful. 🛠️
-# craft-cli
-# craft-cli
-# craft-cli
-# craft-cli
+Clean, fast, beautiful. [-]

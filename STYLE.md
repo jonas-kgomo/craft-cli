@@ -1,8 +1,11 @@
-# Themes
-Our app supports multiple themes, which can be viewed in the main.go file. The available themes are:
+# Cypholon Styling
+Our app supports the Cypholon style engine, which provides multiple high-fidelity terminal themes.
 
-* Default
-* Dark
-* Light
+## Available Themes
+* **Sunset** (Default): Warm desert tones inspired by Arrakis.
+* **Moonlit**: Soft lavender and electric blue for a modern developer look.
+* **NeonVoid**: High-contrast magenta and cyan for the ultimate terminal experience.
 
-Each theme has its own unique style and can be used to customize the look and feel of the app.
+## Font
+We recommend using **Victor Mono** (available in `internal/tui/victor/`). You can opt-out by using any other monospace font.
+- Commands: `/font` or `/cypholon` to view styling info.
