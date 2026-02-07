@@ -8,7 +8,7 @@
 
 <span> Dune | Moonlight Theme</span> 
 
-<img src="craft.png" width="600"/>
+<img src="craft.png" width="800"/>
 </div>
 
 ##  Features
